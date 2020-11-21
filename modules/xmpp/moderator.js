@@ -405,6 +405,12 @@ Moderator.prototype.allocateConferenceFocus = function() {
  * successful allocation of the conference focus
  */
 Moderator.prototype._allocateConferenceFocusError = function(error, callback) {
+
+    if ($(error).find('>error>not-allowed').length) {        
+        this.eventEmitter.emit(XMPPEvents.NOT_IN_PLIST);
+        return;        
+    }
+
     // If the session is invalid, remove and try again without session ID to get
     // a new one
     const invalidSession

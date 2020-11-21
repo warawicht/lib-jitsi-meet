@@ -156,6 +156,9 @@ const XMPPEvents = {
     // Designates an event indicating that the MUC members only config has changed.
     MUC_MEMBERS_ONLY_CHANGED: 'xmpp.muc_members_only_changed',
 
+    // Not in participant list
+    NOT_IN_PLIST: 'xmpp.muc_not_in_plist',
+
     // Designates an event indicating that a participant in the XMPP MUC has
     // advertised that they have audio muted (or unmuted).
     PARTICIPANT_AUDIO_MUTED: 'xmpp.audio_muted',
